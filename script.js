@@ -5,7 +5,7 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
 
 document.querySelector('#share-btn').addEventListener('click', function() {
-    navigator.clipboard.writeText("https://portfolio-caiofarias21.vercel.app/");
+    navigator.clipboard.writeText("https://caio-farias21.github.io/portfolio/");
 });
 
 document.querySelector('#hand').addEventListener('mouseover', function() {
