@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.querySelector('#share-btn').addEventListener('click', function() {
-    navigator.clipboard.writeText("https://portfolio-caiofarias21.vercel.app/");
+    navigator.clipboard.writeText("https://caio-farias21.github.io/portfolio/");
 });
 
 document.querySelector('#hand').addEventListener('mouseover', function() {
