@@ -11,6 +11,28 @@ const Carousel = () => {
   const flickityRef = useRef<Flickity | null>(null);
   const [repositories, setRepositories] = useState({})
 
+  useEffect(() => {
+    if (typeof window !== 'undefined' && Object.entries(repositories).length !== 0) {
+      const carousel = document.querySelector('.carousel');
+      if (!carousel) return
+      
+      if (!flickityRef.current) {
+        initFlickity().then(Flickity => {
+          flickityRef.current = new Flickity(carousel, {
+            imagesLoaded: true,
+            percentPosition: false,
+            pageDots: false,
+            prevNextButtons: false,
+            contain: true,
+          }) as any;
+        })
+      }
+    }
+  }, [repositories]);
+
+  async function initFlickity() {
+    return (await import('flickity')).default;
+  }
 
   useEffect(() => {
     const octokit = new Octokit()
@@ -21,20 +43,6 @@ const Carousel = () => {
       }
     }).then(response => setRepositories(response.data))
   }, [])
-
-
-  useEffect(() => {
-    const carousel = document.querySelector('.carousel');
-    if (carousel && Object.entries(repositories).length !== 0) {
-      flickityRef.current = new Flickity(carousel, {
-        imagesLoaded: true,
-        percentPosition: false,
-        pageDots: false,
-        prevNextButtons: false,
-        contain: true,
-      }) as any;
-    }
-  }, [repositories]);
 
   if (Object.entries(repositories).length === 0) {
     return (
