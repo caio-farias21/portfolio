@@ -48,7 +48,7 @@ const Carousel = () => {
     return (
       <div className="flex overflow-hidden mt-5">
         <div className='w-1 lg:w-14 me-5'></div>
-        <div className='me-5 mb-5'><Skeleton className='w-[300px] h-[120px] rouded' /></div>
+        <div className='me-5 mb-5'><Skeleton className='min-w-[350px] max-w-[350px] h-[120px] rouded' /></div>
       </div>
     )
   }

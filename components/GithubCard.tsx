@@ -88,7 +88,7 @@ import { cn } from "@/lib/utils"
         <div className="text-sky-400 text-amber-600 text-emerald-700 text-fuchsia-800 text-yellow-600 text-teal-900 hidden"></div>
         <CardHeader className="grid grid-cols-[1fr_40px] items-start gap-4 space-y-0">
           <div className="space-y-1">
-            <CardTitle>{name}</CardTitle>
+            <CardTitle className="line-clamp-1">{name}</CardTitle>
             <CardDescription className="line-clamp-1">{description}</CardDescription>
           </div>
           <div className="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground hover:bg-secondary-foreground">
