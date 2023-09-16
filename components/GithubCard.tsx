@@ -84,12 +84,12 @@ import { cn } from "@/lib/utils"
 
     return (
     <Link href={link}>
-      <Card className="shadow-lg dark:shadow-transparent shadow-gray-350 hover:scale-105 hover:border-stone-400 transition-transform">
+      <Card className="shadow-lg dark:shadow-transparent shadow-gray-350 hover:scale-105 hover:border-stone-400 transition-transform min-w-[350px] max-w-[350px]">
         <div className="text-sky-400 text-amber-600 text-emerald-700 text-fuchsia-800 text-yellow-600 text-teal-900 hidden"></div>
         <CardHeader className="grid grid-cols-[1fr_40px] items-start gap-4 space-y-0">
           <div className="space-y-1">
             <CardTitle>{name}</CardTitle>
-            <CardDescription>{description}</CardDescription>
+            <CardDescription className="line-clamp-1">{description}</CardDescription>
           </div>
           <div className="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground hover:bg-secondary-foreground">
               <Button variant="secondary" className="px-3 shadow-none" name={name} onClick={starButtonHandler}
