@@ -46,9 +46,8 @@ const Carousel = () => {
 
   if (Object.entries(repositories).length === 0) {
     return (
-      <div className="flex overflow-hidden relative mt-5">
-        <div className='w-14 me-5'></div>
-        <div className='me-5 mb-5'><Skeleton className='w-[300px] h-[120px] rouded' /></div>
+      <div className="flex overflow-hidden mt-5">
+        <div className='w-1 lg:w-14 me-5'></div>
         <div className='me-5 mb-5'><Skeleton className='w-[300px] h-[120px] rouded' /></div>
       </div>
     )

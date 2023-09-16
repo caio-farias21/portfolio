@@ -2,6 +2,7 @@
 import { Separator } from '@/components/ui/separator'
 import { EnvelopeClosedIcon, CodeIcon, Share2Icon } from '@radix-ui/react-icons'
 import { BiLogoPython, BiLogoTypescript, BiLogoPhp, BiLogoNodejs } from 'react-icons/bi'
+import LogoCLanguage from './custom-icons/LogoCLanguage'
 import { BsCCircleFill } from 'react-icons/bs'
 import { useToast } from "@/components/ui/use-toast"
 
@@ -12,7 +13,7 @@ const languages = [
     },
     {
         language: "C (Programming Language)",
-        icon: BsCCircleFill
+        icon: LogoCLanguage
     },
     {
         language: "PHP",
@@ -54,8 +55,10 @@ export default function Contacts() {
                             const Icon = item.icon
                             return (
                                 <div className='flex ms-1 items-center' key={item.language}>
-                                    <Icon className="w-6 h-6 text-white me-2 aspect-square" />
-                                    <span className='font-semibold font-mono'>{item.language}</span>
+                                    <div className='flex items-center content-center'>
+                                    <Icon className="w-6 h-6 text-white me-2" />
+                                    </div>
+                                    <span className='text-xs font-bold text-neutral-400 font-mono tracking-normal'>{item.language}</span>
                                 </div>
 
                             )
