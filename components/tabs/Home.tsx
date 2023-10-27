@@ -17,7 +17,7 @@ export default function HomeTab() {
                     <Separator className="h-2 rounded-full bg-stone-500" />
                 </div>
 
-                <div className="font-medium lg:w-1/2 text-sm mb-10">I&apos;m a Computer Science student who really enjoys solving problems and create software solutions 🤖 (mainly in Python 🐍)</div>
+                <div className="font-medium lg:w-1/2 text-sm mb-10">I&apos;m a Computer Science student who really enjoys solving problems and create software solutions 🤖</div>
 
                 <h1 className="text-3xl font-bold">Portfolio</h1>
             </div>
