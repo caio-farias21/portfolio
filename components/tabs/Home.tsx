@@ -1,11 +1,12 @@
 import Image from "next/image"
 import { Separator } from "@/components/ui/separator"
 import Carousel from '@/components/Carousel'
+import TemplateTab from "./template"
 
 export default function HomeTab() {
     return (
         <>
-            <div className="lg:px-20 px-10 pt-5">
+            <TemplateTab>
                 <div className="mb-3 lg:text-5xl text-3xl font-medium">
                     <div>Hello, I&apos;m</div>
                     <div>a <span className="font-bold">Backend</span> Developer</div>
@@ -20,7 +21,7 @@ export default function HomeTab() {
                 <div className="font-medium lg:w-1/2 text-sm mb-10">I&apos;m a Computer Science student who really enjoys solving problems and create software solutions 🤖</div>
 
                 <h1 className="text-3xl font-bold">Portfolio</h1>
-            </div>
+            </TemplateTab>
             <Carousel />
         </>
     )

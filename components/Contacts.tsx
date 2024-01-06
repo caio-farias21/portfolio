@@ -12,12 +12,8 @@ const languages = [
         icon: BiLogoPython
     },
     {
-        language: "C (Programming Language)",
+        language: "C/C++",
         icon: LogoCLanguage
-    },
-    {
-        language: "PHP",
-        icon: BiLogoPhp
     },
     {
         language: "Typescript",
@@ -49,7 +45,7 @@ export default function Contacts() {
                 <Separator orientation="vertical" className='h-5 w-1 rounded-full bg-white' />
                 <div>
                     <h4 className="text-md text-white leading-none font-bold tracking-normal">Skills</h4>
-                    <div className="text-xs font-medium text-neutral-400 mt-1">
+                    <div className="text-xs font-medium text-neutral-400 mt-1 space-y-1">
 
                         {languages.map((item) => {
                             const Icon = item.icon

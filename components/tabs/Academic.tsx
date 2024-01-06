@@ -3,6 +3,7 @@ import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import Link from 'next/link'
+import TemplateTab from './template'
 
 export default function AcademicTab() {
     const academic = [
@@ -40,8 +41,7 @@ export default function AcademicTab() {
     ]
 
     return (
-        <>
-            <div className="lg:px-20 px-10 pt-5">
+        <TemplateTab>
             <div className='mb-16'>
                 <h1 className='font-bold text-Cstone text-3xl mb-5'>Academic Education</h1>
 
@@ -80,7 +80,6 @@ export default function AcademicTab() {
                 </div>
                     )
                 })}
-            </div>
-        </>
+            </TemplateTab>
     )
 }
